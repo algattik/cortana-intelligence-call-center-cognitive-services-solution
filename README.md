@@ -348,7 +348,7 @@ Chinese speaker
 
 ##### 7.  Publishing the demo
 
-1.   Click Build and then select “Publish CI\_CallCenterDemo”
+-   Click Build and then select “Publish CI\_CallCenterDemo”
 
 2.   This will open the publish wizard.
 
