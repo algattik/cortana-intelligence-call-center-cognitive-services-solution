@@ -1,0 +1,73 @@
+﻿<Window x:Class="ContosoInsurance_CallCenterDemo.MainWindow"
+        x:Name="_mainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ContosoInsurance_CallCenterDemo" 
+        Background="Black"
+        Foreground="White"
+        WindowStyle="None"
+        Margin="5,5,5,5" MinWidth="300" 
+        Height="541.123" Width="320.616"
+        KeyDown="Window_KeyDown"
+        WindowStartupLocation="CenterScreen"
+        MouseUp="Window_MouseUp"
+        MouseDown="Window_MouseDown">
+
+    <Grid Margin="5,5,5,5" RenderTransformOrigin="0.713,0.494">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Popup x:Name="_popup" Placement="Relative" HorizontalOffset="600" VerticalOffset="0" AllowDrop="True" PreviewDragEnter="Popup_MouseDown" Width="300" PreviewDrop="_popup_DragEnter" PreviewDragOver="_popup_PreviewDragOver"   AllowsTransparency="False"  IsOpen="True">
+            <Grid  Margin="5,5,5,5" RenderTransformOrigin="0.713,0.494">
+
+                <TextBox x:Name="_logText" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextWrapping="Wrap" Text="" VerticalScrollBarVisibility="Visible" Height="500"/>
+            </Grid>
+        </Popup>
+        <Label Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left">
+            <TextBox x:Name="txtNumber" Height="23" TextWrapping="NoWrap" 
+                     Background="Black" Margin="15,1,1,1" Foreground="White"
+                     Width="240" BorderThickness="0" FontSize="18.667" FontFamily="Calibri" FontWeight="Bold"/>
+        </Label>
+
+        <Grid Grid.Row="1" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Grid HorizontalAlignment="Left" Height="468" Margin="0,10,0,0" 
+                  VerticalAlignment="Top" Width="294" Grid.RowSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" Background="Black" Content="1" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="White" Click="callButton_click" FontSize="24" BorderThickness="0" Width="90" Height="50"   />
+                <Button Grid.Row="0" Grid.Column="1" Background="Black" Content="2" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="White" Click="callButton_click" FontSize="24" BorderThickness="0" Width="90" Height="50"     />
+                <Button Grid.Row="0" Grid.Column="2" Background="Black" Content="3" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="White" Click="callButton_click" FontSize="24" BorderThickness="0"  Width="90" Height="50"    />
+                <Button Grid.Row="1" Grid.Column="0" Background="Black" Content="4" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="White" Click="callButton_click" FontSize="24" BorderThickness="0"   Width="90" Height="50"   />
+                <Button Grid.Row="1" Grid.Column="1" Background="Black" Content="5" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="White" Click="callButton_click" FontSize="24"  BorderThickness="0"  Width="90" Height="50"    />
+                <Button Grid.Row="1" Grid.Column="2" Background="Black" Content="6" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="White" Click="callButton_click" FontSize="24"  BorderThickness="0"  Width="90" Height="50"    />
+                <Button Grid.Row="2" Grid.Column="0" Background="Black" Content="7" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="White" Click="callButton_click" FontSize="24"  BorderThickness="0"  Width="90" Height="50"    />
+                <Button Grid.Row="2" Grid.Column="1" Background="Black" Content="8" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="White" Click="callButton_click" FontSize="24" BorderThickness="0"   Width="90" Height="50"    />
+                <Button Grid.Row="2" Grid.Column="2" Background="Black" Content="9" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="White" Click="callButton_click" FontSize="24" BorderThickness="0"   Width="90" Height="50"    />
+                <Button Grid.Row="3" Grid.Column="0" Background="Black" Content="#" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="White" Click="hashButton_click" FontSize="24" BorderThickness="0" Width="90" Height="50"   />
+                <Button Grid.Row="3" Grid.Column="1" Background="Black" Content="0" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="White" Click="callButton_click" FontSize="24" BorderThickness="0"   Width="90" Height="50"    />
+                <Button Grid.Row="3" Grid.Column="2" Background="Black" Content="*" HorizontalAlignment="Center" VerticalAlignment="Center"  Foreground="White" Click="callButton_click" FontSize="24" BorderThickness="0"   Width="90" Height="50"  />
+            </Grid>
+        </Grid>
+
+        <Button x:Name="_startButton" Content="Call" HorizontalAlignment="Left" Margin="25,432,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" Click="StartButton_Click" Visibility="Hidden"/>
+    </Grid>
+</Window>
