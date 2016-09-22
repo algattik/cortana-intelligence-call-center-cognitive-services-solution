@@ -1,0 +1,64 @@
+{
+  "luis_schema_version": "1.3.0",
+  "name": "ContosoInsurance-CallCenter-Chinese",
+  "desc": "",
+  "culture": "zh-cn",
+  "intents": [
+    {
+      "name": "None"
+    },
+    {
+      "name": "status"
+    }
+  ],
+  "entities": [
+    {
+      "name": "claim"
+    },
+    {
+      "name": "grant"
+    }
+  ],
+  "composites": [],
+  "bing_entities": [
+    "number"
+  ],
+  "actions": [],
+  "model_features": [],
+  "regex_features": [
+    {
+      "name": "Number",
+      "pattern": "\\d+",
+      "activated": false
+    }
+  ],
+  "utterances": [
+    {
+      "text": "格兰特",
+      "intent": "status",
+      "entities": [
+        {
+          "entity": "grant",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "索赔",
+      "intent": "status",
+      "entities": [
+        {
+          "entity": "claim",
+          "startPos": 0,
+          "endPos": 1
+        }
+      ]
+    },
+    {
+      "text": "奖学金",
+      "intent": "status",
+      "entities": []
+    }
+  ]
+}
