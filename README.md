@@ -1,6 +1,6 @@
 # Contoso Insurance Call Center Demo: How-to Solution Guide
 
-#### Abstract
+## Abstract
 
 This demo shows a typical call center scenario for a hypothetical
 company called Contoso Insurance. Contoso Insurance provides claims,
@@ -18,7 +18,7 @@ manual process gives an implementer an inside view on how the solution
 is built and an understanding of each of the components.
 
 
-#### Requirements
+## Requirements
 
 This section contains required accounts and software you will need to
 create this solution.
@@ -38,7 +38,7 @@ create this solution.
     Studio](https://msdn.microsoft.com/en-us/library/mt238290.aspx) or
     another similar tool to access a SQL server database.
 
-#### Architecture
+## Architecture
 
 The image in this section shows the overall architecture of the Call
 Center demo, the remainder of this document describes it in detail.
@@ -55,7 +55,7 @@ The demo could be divided into following four steps
 
 4.  Speak the response to the user using the Speech APIs.
 
-Setup Steps
+### Setup Steps
 
 The remainder of this document walks the reader through the creation of
 many different Cortana Intelligence Suite services with the end result
@@ -83,24 +83,24 @@ So for example, Steven X. Smith might use a base service name of
 Before proceeding further make sure you have downloaded the solution
 package zip file with all the resources.
 
-##### 1. Create a new Azure Resource Group
+### 1. Create a new Azure Resource Group
 
-1.   Navigate to ***portal.azure.com*** and log in to your account.
+-   Navigate to ***portal.azure.com*** and log in to your account.
 
-2.   On the left tab click ***Resource Groups***
+-   On the left tab click ***Resource Groups***
 
-3.   In the resource groups page that appears, click Add
+-   In the resource groups page that appears, click Add
 
-4.   Provide a name ***callcenterdemo\[UI\]\[n\]-rg***
+-   Provide a name ***callcenterdemo\[UI\]\[n\]-rg***
 
-5.   Set the location to **Central US**
+-   Set the location to **Central US**
 
-6.  Select **Pin to Dashboard** option
+-  Select **Pin to Dashboard** option
 
-7.  Click ***Create***
+-  Click ***Create***
 
 
-##### 2. Create Cognitive Services account for Language Understanding Intelligent Service (LUIS)
+### 2. Create Cognitive Services account for Language Understanding Intelligent Service (LUIS)
 
 1.   Navigate to ***portal.azure.com*** and log in to your account.
 
