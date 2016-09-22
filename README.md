@@ -102,142 +102,133 @@ package zip file with all the resources.
 
 ### 2. Create Cognitive Services account for Language Understanding Intelligent Service (LUIS)
 
-1.   Navigate to ***portal.azure.com*** and log in to your account.
+-   Navigate to ***portal.azure.com*** and log in to your account.
 
-2.  On the left tab click ***New***
+-  On the left tab click ***New***
 
-3.   Search for ***Cognitive Services APIs,*** select it and click **create**
+-   Search for ***Cognitive Services APIs,*** select it and click **create**
 
-4.  In the create screen, for Account name, enter ***callcenterdemo\[UI\]\[n\]-luis***
+-  In the create screen, for Account name, enter ***callcenterdemo\[UI\]\[n\]-luis***
 
-5.  Select the correct subscription
+-  Select the correct subscription
 
-6.   For API type, select **Language Understanding Intelligent Service**
+-   For API type, select **Language Understanding Intelligent Service**
 
-7.   For Location, select **West US** (In future it would be location
+-   For Location, select **West US** (In future it would be location
     independent i.e. global)
 
-8.   For Pricing, select **S0 Standard** tier. (You can change the tier
+-   For Pricing, select **S0 Standard** tier. (You can change the tier
     later based on your usage)
 
-9.   For Resource group, select ***Use Existing*** and then select ***callcenterdemo\[UI\]\[n\]-rg***
+-   For Resource group, select ***Use Existing*** and then select ***callcenterdemo\[UI\]\[n\]-rg***
 
-10.   Open Legal terms and click I Agree.
+-   Open Legal terms and click I Agree.
 
-11.   Click ***Create.***
+-   Click ***Create.***
 
-12.   It would take a minute or two for Cognitive Services API account to be created, navigate to the dashboard on Azure Portal.
+-   It would take a minute or two for Cognitive Services API account to be created, navigate to the dashboard on Azure Portal.
 
-13.   On the dashboard, click on your resource group,
+-   On the dashboard, click on your resource group,
     ***callcenterdemo\[UI\]\[n\]-rg*** and then click on the newly
     created LUIS service account, ***callcenterdemo\[UI\]\[n\]-luis***
 
-14.   Go to Settings &gt; Keys, make a note of Key 1.
+-   Go to Settings &gt; Keys, make a note of Key 1.
 
 
 
-##### 3. Create Cognitive Services account for Bing Speech API
+### 3. Create Cognitive Services account for Bing Speech API
 
-1.   Navigate to ***portal.azure.com*** and log in to your account.
+-   Navigate to ***portal.azure.com*** and log in to your account.
 
-2.   On the left tab click ***New***
+-   On the left tab click ***New***
 
-3.   Search for ***Cognitive Services APIs,*** select it and click
+-   Search for ***Cognitive Services APIs,*** select it and click
     **create**
 
-4.   For Account name, enter ***callcenterdemo\[UI\]\[n\]-speech***
+-   For Account name, enter ***callcenterdemo\[UI\]\[n\]-speech***
 
-5.   Select the correct subscription
+-   Select the correct subscription
 
-6.   For API type, select **Bing Speech API**
+-   For API type, select **Bing Speech API**
 
-7.   For Location, select **West US**.
+-   For Location, select **West US**.
 
-8.   For Pricing, select **Standard**.
+-   For Pricing, select **Standard**.
 
-9.   For Resource group, select ***callcenterdemo\[UI\]\[n\]-rg***
+-   For Resource group, select ***callcenterdemo\[UI\]\[n\]-rg***
 
-10.   Open Legal terms and click I Agree.
+-   Open Legal terms and click I Agree.
 
-11.   Click ***Create***
+-   Click ***Create***
 
-12.   Go to the dashboard of your Azure account.
+-   Go to the dashboard of your Azure account.
 
-13.   On the dashboard, click on your resource group,
+-   On the dashboard, click on your resource group,
     ***callcenterdemo\[UI\]\[n\]-rg*** and then click on the newly
     created Speech service account,
     ***callcenterdemo\[UI\]\[n\]-speech***
 
-14.   Go to Settings &gt; Keys, make a note of Key 1 and Key 2.
+-   Go to Settings &gt; Keys, make a note of Key 1 and Key 2.
 
-##### 4. Create two LUIS applications for English and Chinese
+### 4. Create two LUIS applications for English and Chinese
 
 We will first create LUIS application that understands intents for
 English Speaker.
 
-1.   Navigate to <https://www.luis.ai> and login with a
+-   Navigate to <https://www.luis.ai> and login with a
     Microsoft account.
 
-2.   Click the **My Applications** tab on the top right.
+-   Click the **My Applications** tab on the top right.
 
-3.   Click on **New App** button and select **Import existing
+-   Click on **New App** button and select **Import existing
     application** option.
 
-4.   Navigate to LUIS models folder in the solution package, select the
+-   Navigate to LUIS models folder in the solution package, select the
     **ContosoInsurance-CallCenter-English.json** file.
 
-5.   Provide an optional name for your app, by default it would pick the
+-   Provide an optional name for your app, by default it would pick the
     name of the imported json file as the app name.
 
-6.   Click Import, this would take few mins.
+-   Click Import, this would take few mins.
 
-7.   On the newly created application page, click on **train** button on
+-   On the newly created application page, click on **train** button on
     bottom left. This would also take few mins.
 
-8.   The publish tab on top left should be active now, click it and
-    select **Publish as web service.**
+-   The publish tab on top left should be active now, click it and select **Publish as web service.**
 
-9.   Close the Publish dialog and click on the App Settings tab and make
-    a note of the **App Id** and save it in the table below.
+-   Close the Publish dialog and click on the App Settings tab and make a note of the **App Id** and save it in the table below.
 
-Next, we will create LUIS Application that understands intent for
-Chinese speaker
+_Next, we will create LUIS Application that understands intent for Chinese speaker_
 
-1.   Follow the exact same steps as above, except select the
+-   Follow the exact same steps as above, except select the
     **ContosoInsurance-CallCenter-Chinese.json** file on step 4.
 
-2.   Publish the app and make a note of App Id and save it in the table
+-   Publish the app and make a note of App Id and save it in the table
     below, we will need it later.
 
-3.   In the LUIS portal (luis.ai), click on your account name on top
-    right and select My Settings.
+-   In the LUIS portal (luis.ai), click on your account name on top right and select My Settings.
 
-4.   Under My Settings, go to Subscription Keys section and add the
-    **LUIS API Account Key** that you saved in the previous step and
-    click on Add Key button.
+-   Under My Settings, go to Subscription Keys section and add the **LUIS API Account Key** that you saved in the previous step and click on Add Key button.
 
-5.   Make sure the key shows up in Assigned Key section for
+-   Make sure the key shows up in Assigned Key section for
     your applications.
 
-##### 5. Azure SQL Server and Database
+### 5. Azure SQL Server and Database
 
-> We need to create an Azure SQL Database to store customer information
-> and status of their claims. The demo would look customers up in this
-> database.
+We need to create an Azure SQL Database to store customer information and status of their claims. The demo would look customers up in this database.
 
-1.   Navigate to ***portal.azure.com*** and login in to your account.
+-   Navigate to ***portal.azure.com*** and login in to your account.
 
-2.   On the left tab click ***New&gt;Data and Storage&gt;SQL Database***
+-   On the left tab click ***New&gt;Data and Storage&gt;SQL Database***
 
-3.   Enter the name ***callcenterdemo\[UI\]\[n\]-db*** for the database
-    name
+-   Enter the name ***callcenterdemo\[UI\]\[n\]-db*** for the database name
 
-4.   Resource group: Previously created
+-   Resource group: Previously created
     ***callcenterdemo\[UI\]\[n\]-rg***
 
-5.   Select blank database for ***source***
+-   Select blank database for ***source***
 
-6.   Under Server click the arrow and choose ***Create a new server***
+-   Under Server click the arrow and choose ***Create a new server***
 
     -   Name: **callcenterdemo\[UI\]\[n\]-server**
 
@@ -251,35 +242,25 @@ Chinese speaker
 
     -   Click OK
 
-7.   Click ***Create***
+-   Click ***Create***
 
-8.   Wait for the database and server to be created.
+-   Wait for the database and server to be created.
 
-9.   Type D, this command will take you the dashboard of your
-    Azure account.
+-   Go to the dashboard of your Azure account.
 
-10.   On the dashboard, click on your resource group,
-    ***callcenterdemo\[UI\]\[n\]-rg*** and then click on the newly
-    created SQL Server in the list of resources.
+-   On the dashboard, click on your resource group,
+    ***callcenterdemo\[UI\]\[n\]-rg*** and then click on the newly created SQL Server in the list of resources.
 
-11.   Under ***Settings*** for the new server, click ***Firewall*** and
-    create a rule called ***open*** with the IP range of 0.0.0.0
-    to 255.255.255.255. This will allow you to access the database from
-    your desktop. Click ***Save.***
+-   Under ***Settings*** for the new server, click ***Firewall*** and create a rule called ***open*** with the IP range of 0.0.0.0 to 255.255.255.255. This will allow you to access the database from your desktop. Click ***Save.***
 
-    **NOTE:** This firewall rule is not recommended for production level
-    systems but for this demo is acceptable. You will want to set this
-    rule to the IP range of your secure system.
+    **NOTE:** This firewall rule is not recommended for production level systems but for this demo is acceptable. You will want to set this rule to the IP range of your secure system.
 
-12.   Click on the SQL Server Database that you just created, under
+-   Click on the SQL Server Database that you just created, under
     properties tab click on “**show database connection strings**”.
 
-13.   Save the connection string for ADO.NET along with username and password
+-   Save the connection string for ADO.NET along with username and password
 
-14.   Launch [*SQL Server Management Studio*](https://msdn.microsoft.com/en-us/library/mt238290.aspx)
-    (SSMS), or a similar tool, and connect to the database with the
-    information you recorded previously. Following instructions
-    are for SSMS
+-   Launch [*SQL Server Management Studio*](https://msdn.microsoft.com/en-us/library/mt238290.aspx) (SSMS), or a similar tool, and connect to the database with the information you recorded previously. Following instructions are for SSMS
 
     - NOTE: The server name in most tools will require the full name:
     **callcenterdemo\[UI\]\[n\]-server.database.windows.net,1433**
@@ -287,31 +268,26 @@ Chinese speaker
     -   For Authentication, select SQL Server Authentication and enter the
     Login and Password
 
-    -   Click on the ***callcenterdemo*\[UI\]\[n\]-*db*** that you created
-    on the server.
+    -   Click on the ***callcenterdemo*\[UI\]\[n\]-*db*** that you created on the server.
 
     -   Click ***New Query*** at the tool bar.
 
     -   Copy and execute the SQL script located in the package directory
-    ***SQL Script\\databasescript.sql to*** create the necessary table
-    for the demo <br/>
-     NOTE: If you get permission denied error, close SSMS and try running
-    it as administrator (Right Click &gt; Run as administrator).
+    ***SQL Script\\databasescript.sql to*** create the necessary table for the demo <br/>
+     NOTE: If you get permission denied error, close SSMS and try running it as administrator (Right Click &gt; Run as administrator).
 
-##### 6. Build the source code with new credentials.
+### 6. Build the source code with new credentials.
 
-1.   You will need Visual Studio to work with code, you can install it
+-   You will need Visual Studio to work with code, you can install it
     from
     [here](https://www.visualstudio.com/post-download-vs?sku=community&clcid=0x409&downloadrename=true)
 
-2.   Unzip the Source code folder and navigate to it.
+-   Unzip the Source code folder and navigate to it.
 
-3.   Double click on the solution file (.sln extension), this will open
+-   Double click on the solution file (.sln extension), this will open
     the solution in Visual Studio.
 
-4.   Open **App.config** file and fill in the values from the above
-    tables under appSettings section. Following are the values you need
-    to change
+-   Open **App.config** file and fill in the values from the above tables under appSettings section. Following are the values you need to change
 
 ```
 <!-- This is the appID for the English Version of LUIS Model -->
@@ -332,35 +308,32 @@ Chinese speaker
 <!-- Azure SQL Connection String, you can get it from portal.azure.com -->
 <add key="dbConnectionString" value="CHANGE_ME"/>    
 ```
-5.  To build your code, select Debug from Solution Configurations
-    dropdown and select x64 for solution platforms dropdown.
+-  To build your code, select Debug from Solution Configurations dropdown and select x64 for solution platforms dropdown.
 
-6.  Click on the green start icon.
+-  Click on the green start icon.
 
-7.   You should now have a working demo.
+-   You should now have a working demo.
 
-8.    To Test the Demo, you need to have working speaker and microphone
+-    To Test the Demo, you need to have working speaker and microphone
       - Dial 132307, you will hear a telephone ring.
       - When the system prompts, ask the question - " What is the status of my claim?"
       - When prompted for CRN, say "56788"
 
       **NOTE: Please watch the demo video (DemoVideo-English.mp4) to see it in action.**
 
-##### 7.  Publishing the demo
+### 7.  Publishing the demo
 
 -   Click Build and then select “Publish CI\_CallCenterDemo”
 
-2.   This will open the publish wizard.
+-   This will open the publish wizard.
 
-3.   On Publish wizard, select the location on your machine where you
+-   On Publish wizard, select the location on your machine where you
     want to publish the demo.
 
-4.   Click Next, and select from CD-ROM or DVD-ROM.
+-  Click Next, and select from CD-ROM or DVD-ROM.
 
-5.   On the next screen, select “The application will not check for
-    updates”
+-   On the next screen, select “The application will not check for updates”
 
-6.   Click Next and then select Finish.
+-   Click Next and then select Finish.
 
-7.   The publish folder will have an .exe file, you can install the demo
-    locally using this file.
+-   The publish folder will have an .exe file, you can install the demo locally using this file.
