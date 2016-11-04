@@ -6,7 +6,7 @@ Call Center Automation (CCA) is an intelligent multi-language call center soluti
 
 In an era where mobile phones are dominant and keypads are not always readily accessible, Call Center Automation provides an intuitive, simple, and convenient way for callers to convey their requests. CCA provides an intelligent and natural self-service experience that can be repurposed across other customer channels.
 
-This solution package contains materials to help both technical and business audiences understand our call center solution built on the [Cortana Intelligence Suite](https://www.microsoft.com/en-us/server-cloud/cortana-intelligence-suite/Overview.aspx) and Microsoft Cognitive Services.
+This solution package contains materials to help both technical and business audiences understand our call center solution built on the [Cortana Intelligence Suite](https://www.microsoft.com/en-us/server-cloud/cortana-intelligence-suite/Overview.aspx) and [Microsoft Cognitive Services](https://www.microsoft.com/cognitive-services).
 
 [1] - https://www.talkdesk.com/blog/10-customer-services-statistics-for-call-center-supervisors/
 
